@@ -7,8 +7,9 @@ import 'package:purchase/routes.dart';
 
 late final Controller c;
 final database = Database();
-void main() {
+void main() async {
   c = Get.put(Controller());
+  await database.init();
   runApp(const MyApp());
 }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:intl/intl.dart';
+// import 'package:get/get.dart';
+// import 'package:intl/intl.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 // import 'package:shamsi_date/shamsi_date.dart';
 
@@ -14,14 +14,13 @@ class DatePickerTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _dateController.text =
-        '${initialDate?.toJalali().year}/${initialDate?.toJalali().month}/${initialDate?.toJalali().day}' ??
-            '';
+        '${initialDate?.toJalali().year}/${initialDate?.toJalali().month}/${initialDate?.toJalali().day}';
     dateTime = initialDate;
     return TextField(
       readOnly: true,
       controller: _dateController,
       decoration: InputDecoration(
-        border: const OutlineInputBorder(),
+        border: const UnderlineInputBorder(),
         labelText: label,
       ),
       onTap: () async {

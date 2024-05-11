@@ -23,6 +23,7 @@ class Controller extends GetxController {
       users[element.id] = element.data['name'];
     }
     var resp = await database.getAllOrders();
+    orders.clear();
     for (var element in resp) {
       orders.add(Order(
         id: element.id,
@@ -42,12 +43,13 @@ class Controller extends GetxController {
                 element.data['date_order'] == '')
             ? null
             : DateTime.parse(element.data['date_order']),
-        dateDelivery: (element.data['date_delivery'] == null ||
-                element.data['date_delivery'] == '')
+        dateDelivery: (element.data['delivery_date'] == null ||
+                element.data['delivery_date'] == '')
             ? null
-            : DateTime.parse(element.data['date_delivery']),
+            : DateTime.parse(element.data['delivery_date']),
       ));
-      gridDataSource.value = GridDataSource(orders: orders);
     }
+    gridDataSource.value = GridDataSource(orders: orders);
+    dataGridController.value.notifyListeners();
   }
 }
