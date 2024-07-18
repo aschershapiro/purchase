@@ -1,16 +1,17 @@
 # purchase
 
-A new Flutter project.
+Simple purchase management software writen with Flutter
 
-## Getting Started
+This version supports Shamsi Callander and date picker
 
-This project is a starting point for a Flutter application.
+# packages and libraries
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  get: ^4.6.6
+  pocketbase: ^0.18.1
+  syncfusion_flutter_datagrid: ^25.1.41
+  intl: ^0.19.0
+  persian_datetime_picker: ^2.6.0
+  shamsi_date: ^1.0.2
+  syncfusion_flutter_datagrid_export: ^25.1.42
+  path_provider: ^2.1.3
+  syncfusion_flutter_xlsio: ^25.2.3
