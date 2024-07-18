@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:purchase/main_page.dart';
-// import 'package:purchase/purchase.dart';
 
 List<GetPage<dynamic>> appRoutes = [
   GetPage(

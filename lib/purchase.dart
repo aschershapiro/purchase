@@ -5,7 +5,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:purchase/date_picker_widget.dart';
-import 'package:purchase/grid_data_source.dart';
 import 'package:purchase/main.dart';
 import 'package:purchase/order.dart';
 
@@ -43,8 +42,6 @@ class Purchase extends StatelessWidget {
           if (order.id != '') {
             order.dateOrder = x.dateTime;
             order.dateDelivery = y.dateTime;
-            // c.gridDataSource.value = GridDataSource(orders: c.orders.value);
-            // c.dataGridController.value.notifyListeners();
             database.updateOrder(order);
           } else if (order.title != '') {
             order.dateOrder = x.dateTime;
@@ -79,8 +76,6 @@ class Purchase extends StatelessWidget {
                     : DateTime.parse(element.data['date_delivery']),
               ));
             }
-            // c.gridDataSource.value = GridDataSource(orders: c.orders.value);
-            // c.dataGridController.value.notifyListeners();
           }
           SchedulerBinding.instance.addPostFrameCallback((_) {
             Get.back();

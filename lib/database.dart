@@ -3,8 +3,7 @@ import 'package:purchase/main.dart';
 import 'package:purchase/order.dart';
 
 class Database {
-  final _pb = PocketBase('http://192.168.10.58:32768');
-  // final _pb = PocketBase('http://127.0.0.1');
+  final _pb = PocketBase('http://127.0.0.1');
   bool get isAuth {
     return _pb.authStore.isValid && _pb.authStore.token.isNotEmpty;
   }
